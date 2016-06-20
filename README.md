@@ -1,1 +1,2 @@
 # Augumented-Reality-App
+We intend to present an app which will take the interaction of physical world and digital world to a whole new dimension and simultaneoulsy will adapt with the individual's brain thus taking customization at new levels. This will further preserve the skill of our brain which are slowly being killed by the existing apps
