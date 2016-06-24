@@ -1,6 +1,4 @@
-
-
-
+import sys
 import cv2, os
 import numpy as np
 from PIL import Image
@@ -9,7 +7,7 @@ from PIL import Image
 cascadePath = sys.argv[1]
 faceCascade = cv2.CascadeClassifier(cascadePath)
 
-# For face recognition we will the the Local Binary Pattern Histogram Face Recognizer 
+# For face recognition we will use the the Local Binary Pattern Histogram Face Recognizer 
 recognizer = cv2.createLBPHFaceRecognizer()
 
 def get_images_and_labels(path):
@@ -64,3 +62,4 @@ for image_path in image_paths:
             print "{} is Incorrect Recognized as {}".format(nbr_actual, nbr_predicted)
         cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
         cv2.waitKey(1000)
+

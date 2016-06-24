@@ -4,7 +4,7 @@ import sys
 cascPath = sys.argv[1]
 faceCascade = cv2.CascadeClassifier(cascPath)
 
-video_capture = cv2.VideoCapture(0)
+video_capture = cv2.VideoCapture(1)
 
 while True:
     # Capture frame-by-fram i.e a frame will be a image for us.
