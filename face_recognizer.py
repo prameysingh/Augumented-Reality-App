@@ -32,6 +32,7 @@ def get_images_and_labels(path):
                                             minNeighbors=5,
                                             minSize=(30, 30),
                                             flags = cv2.cv.CV_HAAR_SCALE_IMAGE)
+        
         # If face is detected, append the face to images and the label to labels
         for (x, y, w, h) in faces:
             images.append(image[y: y + h, x: x + w])
@@ -65,6 +66,7 @@ for image_path in image_paths:
                                         minNeighbors=5,
                                         minSize=(30, 30),
                                         flags = cv2.cv.CV_HAAR_SCALE_IMAGE)
+    
     for (x, y, w, h) in faces:
         nbr_predicted, conf = recognizer.predict(predict_image[y: y + h, x: x + w])
         nbr_actual = int(os.path.split(image_path)[1].split(".")[0].replace("subject", ""))
